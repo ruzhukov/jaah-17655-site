@@ -12,7 +12,7 @@ checker=/usr/lib/jaahd/tools/check_context.py
 if [ -f "$checker" ]; then
   python3 "$checker" --repo .
 else
-  echo "note: $checker not installed; context check skipped"
+  echo "SKIPPED: context check ($checker not installed on this machine)"
 fi
 
 if [ "$tier" = full ]; then
