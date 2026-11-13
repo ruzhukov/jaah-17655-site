@@ -1,0 +1,9 @@
+name: gate-never
+# Pipeline-gate live check (Jaah task 20214): never.
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo never
