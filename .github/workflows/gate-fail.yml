@@ -1,0 +1,11 @@
+name: gate-fail
+# Pipeline-gate live check (Jaah task 20214): fail.
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "gate check fails on purpose"; exit 1
