@@ -1,0 +1,11 @@
+name: gate-pass
+# Pipeline-gate live check (Jaah task 20214): pass.
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "gate check passes"
